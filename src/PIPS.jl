@@ -1,6 +1,9 @@
 module PIPS
 
 # package code goes here
+import JuMP
+import StochJuMP
+import MPI
 
 # This should not specify the file extension, because MacOSX has *.dylib.
 # The library path should be specified in LD_LIBRARY_PATH or DYLD_LIBRARY_PATH.
