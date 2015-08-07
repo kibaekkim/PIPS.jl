@@ -33,7 +33,7 @@ wastecost = 4
 @defVar(m, profit)
 
 @defVar(m, received[centers] >= 0)
-@setObjective(m, Min, sum{transcost[i,j]*ship[i,j], i=factories, j=centers} - sum{prodcost*product[i], i=factories})
+@setObjective(m, Min, sum{transcost[i,j]*ship[i,j], i=factories, j=centers} + sum{prodcost*product[i], i=factories})
 for j in centers
     @addConstraint(m, received[j] == sum{ship[i,j], i=factories})
 end
